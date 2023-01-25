@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        border: 1px solid black;
+    
+    }
+</style>
+<body>
+    <!-- <ul id="mylist">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+    <button onclick="myfunction()">Appendchild</button>
+    <script>
+        function myfunction(){
+            const a= document.createElement("li");                     //add datta
+            const b= document.createTextNode("ReactJs");
+            a.appendChild(b);
+            document.getElementById("mylist").appendChild(a);    
+        } --> 
+<div id="container">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JS</li>
+    <li id="abc">ReactJs</li>
+</div>
+<button onclick="myfunction()">Appendchild</button>
+<input type="button" value="remove" onclick="remove()">
+<script>
+    function myfunction(){
+            const a= document.createElement("li");
+            const b= document.createTextNode("ReactJs");    //add data in container
+            a.appendChild(b);
+            document.getElementById("abc").appendChild(a);
+    }
+    function remove(){
+        var x=document.getElementById('abc')         //add data remove
+        x.removeChild(x.lastElementChild);
+    }
+    </script>
+</body>
+</html>

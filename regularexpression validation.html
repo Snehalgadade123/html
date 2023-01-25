@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="validation()">
+        <input type="text"id="demo" placeholder="phone number"><br><br><br>
+        <input type="text"id="email"placeholder="email"><br><br><br>
+        <input type="text"id="password"placeholder="password"><br><br><br>
+        <input type="submit">
+    </form>
+    <script>
+        function validation(){
+
+            var x=document.getElementById('demo').value;
+            var y=/^([0]\+[0-9] {1,5})?([7-9][0-9]{9})$/;
+            var z=y.test(x);
+            alert("phone:" +z);
+
+            var email=document.getElementById('email').value;
+            var x=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var y=x.test(email);
+            alert("email:"+y);
+
+            var password=document.getElementById('password').value;
+            var c=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+            var b=c.test(password);
+            alert("pass:"+b);
+
+
+        }
+    </script>
+</body>
+</html>

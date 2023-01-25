@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        border: 2px solid black;
+        width: 500px;
+        padding: 10px;
+
+    }
+
+
+    .main {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #view {
+        order: 1px solid black;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <form>
+
+            <div class="container" id="get">
+                <div class="child">
+                    <input type="text" placeholder="username">
+                    <input type="text" placeholder="password"><br><br><br>
+                    <input type="text" placeholder="email"><br><br><br>
+                    <input type="text" placeholder="DOB"><br><br><br>
+                    <!-- <input type="checkbox" onclick="show()">veiw all
+            <input type="checkbox"onclick="hide()">hide  -->
+                    <input type="checkbox" onclick="func()">view all
+        </form>
+    </div>
+    </div>
+    <div class="container1">
+        <form id="view" style="display: none;">
+            <label for="choose">password</label>
+            <input type="text" id="choose" name="i like" required pattern="[A-Za-z]{3}"><br><br><br>
+            <label for="choose">email</label>
+            <input type="text" id="choose" name="i like" required
+                pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"><br><br><br>
+            <label for="choose">number</label>
+            <input type="text" id="choose" name="i like" required pattern="/d{1,5}" maxlength="6"><br><br><br>
+            <label for="choose">date</label>
+            <input type="text" id="choose" name="i like" required
+                pattern="/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/" maxlength="6"><br><br><br>
+            <label for="choose">mobile number</label>
+            <input type="text" id="choose" name="i like" required pattern="/^/"><br><br><br>
+            <button>submit</button>
+        </form>
+    </div>
+    </div>
+
+
+    <script>
+        // function show(){
+        //     var sh=document.getElementById("view");
+        //     sh.style.visibility="visible";
+        // }
+        // function hide(){
+        // document.getElementById("view").style.visibility="hidden";
+
+        // }
+        function func() {
+            var x = document.getElementById("view");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

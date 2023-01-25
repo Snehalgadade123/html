@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        height: 300px;
+        border: 1px solid black;
+        width: 300px;
+    }
+</style>
+<body>
+   
+ <div id="container"> </div>
+
+    <button onclick="changeColor('yellow')">yellow</button>
+    <button onclick="changeColor('red')">red</button>
+  <button onclick="changeColor('blue')">blue</button>
+    <button onclick="changeColor('green')">green</button>
+    <script>
+        function changeColor(color){
+            var elem=document.getElementById('container');
+            elem.style.backgroundColor =color;
+        }
+        </script>
+    
+
+
+   
+
+   
+</body>
+</html>
